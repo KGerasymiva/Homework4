@@ -1,0 +1,12 @@
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\Share.deps.json
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\Share.dll
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\Share.pdb
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\DAL.dll
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\DAL.pdb
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.csprojResolveAssemblyReference.cache
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.csproj.CoreCompileInputs.cache
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.AssemblyInfoInputs.cache
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.AssemblyInfo.cs
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.csproj.CopyComplete
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.dll
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\Share.pdb

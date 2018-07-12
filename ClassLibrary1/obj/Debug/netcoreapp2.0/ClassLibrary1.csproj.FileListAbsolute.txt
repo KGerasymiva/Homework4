@@ -1,0 +1,6 @@
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\ClassLibrary1.deps.json
+E:\BSA2018\Task4\ClassLibrary1\bin\Debug\netcoreapp2.0\ClassLibrary1.dll
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\ClassLibrary1.csprojResolveAssemblyReference.cache
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\ClassLibrary1.AssemblyInfoInputs.cache
+E:\BSA2018\Task4\ClassLibrary1\obj\Debug\netcoreapp2.0\ClassLibrary1.AssemblyInfo.cs
