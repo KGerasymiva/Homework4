@@ -10,13 +10,15 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using BL.Service;
 
 
-namespace WebApplication5
+namespace PL
 {
     public class Startup
     {
@@ -31,12 +33,13 @@ namespace WebApplication5
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IServiceTicket, ServiceTicket>();
+            services.AddTransient<IServicePlaneType, ServicePlaneType>();
             services.AddTransient<IRepository<Entity>, Repository<Entity>>();
-            services.AddDbContext<AirportContext>();
+            services.AddDbContext<AirportContext>(opt => opt.UseInMemoryDatabase());
             services.AddRouting();
             services.AddMvc();
             services.AddAutoMapper();
-
 
         }
 
@@ -49,6 +52,7 @@ namespace WebApplication5
             }
 
             app.UseMvc();
+
             SeedData.EnsurePopulated(app);
         }
     }

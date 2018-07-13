@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Share
+namespace DTO
 {
     public class PilotDTO
     {

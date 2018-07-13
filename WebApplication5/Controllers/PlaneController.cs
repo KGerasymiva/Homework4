@@ -2,7 +2,7 @@
 using DAL.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication5.Controllers
+namespace PL.Controllers
 {
     [Produces("application/json")]
  //   [Route("api/PlaneDTO")]

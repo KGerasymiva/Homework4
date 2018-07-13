@@ -1,68 +1,57 @@
 ﻿using System.Collections.Generic;
-using AutoMapper;
-using Share;
-using DAL.UnitOfWork;
+using BL;
+using BL.Service;
 using Microsoft.AspNetCore.Mvc;
+using DTO;
 
-namespace WebApplication5.Controllers
+namespace PL.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
-    //[Route("api/TicketDTO")]
-    public class TicketController : Controller
+   public class TicketController : Controller
     {
-        private UnitOfWork unitOfWork = new UnitOfWork();
+        private IServiceTicket _serviceTicket;
 
-        private readonly IMapper _mapper;
-
-        // Assign the object in the constructor for dependency injection
-        public TicketController(IMapper mapper)
+        public TicketController(IServiceTicket serviceTicket)
         {
-            _mapper = mapper;
+            this._serviceTicket = serviceTicket;
         }
 
-        //private IUnitOfWork unitOfWork = new UnitOfWork();
-        //public TicketController(IUnitOfWork unitOfWork)
-        //{
-
-        //    this.unitOfWork = unitOfWork;
-        //}
-
-        // GET: api/TicketDTO
+        // GET: api/Ticket
         [HttpGet]
-        public IEnumerable<TicketDTO> Get(){
-
-            var model = _mapper.Map<DAL.Models.Ticket, Share.TicketDTO>(new DAL.Models.Ticket());
-            model.
-            var xx = unitOfWork.TicketRepository.Get();
-            return xx;
-           // return new string[] { "value1", "value2" };
+        public IEnumerable<TicketDTO> Get()
+        {
             
+            return _serviceTicket.GetTickets();
         }
 
         // GET: api/TicketDTO/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public TicketDTO Get(int id)
         {
-            return "value";
+            return _serviceTicket.GetTicket(id) ;
         }
-        
+
+
         // POST: api/TicketDTO
         [HttpPost]
         public void Post([FromBody]string value)
         {
+            //TODO
         }
-        
+
         // PUT: api/TicketDTO/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
+            //TODO
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            //TODO
         }
     }
 }

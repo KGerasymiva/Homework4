@@ -1,4 +1,4 @@
-﻿namespace Share
+﻿namespace DTO
 {
     public class TicketDTO
     {

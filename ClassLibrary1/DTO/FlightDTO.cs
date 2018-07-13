@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Share
+namespace DTO
 {
     public class FlightDTO
     {

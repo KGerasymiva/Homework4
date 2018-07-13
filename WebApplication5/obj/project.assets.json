@@ -5082,6 +5082,20 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "DAL": "1.0.0",
+          "DTO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -13298,6 +13312,11 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "BL/1.0.0": {
+      "type": "project",
+      "path": "../BL/BL.csproj",
+      "msbuildProject": "../BL/BL.csproj"
+    },
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DAL/DAL.csproj",
@@ -13313,8 +13332,7 @@
     ".NETCoreApp,Version=v2.0": [
       "AutoMapper >= 7.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 4.0.1",
-      "DAL >= 1.0.0",
-      "DTO >= 1.0.0",
+      "BL >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.6",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3"
@@ -13327,9 +13345,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BSA2018\\Task4\\WebApplication5\\WebApplication5.csproj",
-      "projectName": "WebApplication5",
-      "projectPath": "E:\\BSA2018\\Task4\\WebApplication5\\WebApplication5.csproj",
+      "projectUniqueName": "E:\\BSA2018\\Task4\\WebApplication5\\PL.csproj",
+      "projectName": "PL",
+      "projectPath": "E:\\BSA2018\\Task4\\WebApplication5\\PL.csproj",
       "packagesPath": "C:\\Users\\Homka\\.nuget\\packages\\",
       "outputPath": "E:\\BSA2018\\Task4\\WebApplication5\\obj\\",
       "projectStyle": "PackageReference",
@@ -13350,11 +13368,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\BSA2018\\Task4\\ClassLibrary1\\DTO.csproj": {
-              "projectPath": "E:\\BSA2018\\Task4\\ClassLibrary1\\DTO.csproj"
-            },
-            "E:\\BSA2018\\Task4\\DAL\\DAL.csproj": {
-              "projectPath": "E:\\BSA2018\\Task4\\DAL\\DAL.csproj"
+            "E:\\BSA2018\\Task4\\BL\\BL.csproj": {
+              "projectPath": "E:\\BSA2018\\Task4\\BL\\BL.csproj"
             }
           }
         }

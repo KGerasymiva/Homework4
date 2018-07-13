@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace WebApplication5
+namespace PL
 {
     public class Program
     {
@@ -19,7 +19,8 @@ namespace WebApplication5
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+                .UseStartup<Startup>().UseDefaultServiceProvider(options => 
+        options.ValidateScopes = false)
                 .Build();
     }
 }

@@ -10,14 +10,9 @@ namespace DAL
 {
     public class AirportContext : DbContext
     {
-        //private readonly IOptions<DatabaseConfiguration> configuration;
-        //public AirportContext(DbContextOptions<AirportContext> options)
-        //    : base(options) { }
+        public AirportContext(DbContextOptions<AirportContext> options)
+            : base(options) { }
 
-        public AirportContext()
-        {
-
-        }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Departure> Departures { get; set; }
@@ -27,6 +22,8 @@ namespace DAL
         public DbSet<Plane> Planes { get; set; }
         public DbSet<PlaneType> PlaneTypes { get; set; }
 
+
+        
 
     }
 

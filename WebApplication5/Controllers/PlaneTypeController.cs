@@ -1,45 +1,49 @@
 ﻿using System.Collections.Generic;
+using BL.Service;
 using DAL.UnitOfWork;
+using DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication5.Controllers
+namespace PL.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
-    //   [Route("api/PlaneTypeDTO")]
+    //   [Route("api/PlaneType")]
     public class PlaneTypeController : Controller
     {
-        private IUnitOfWork unitOfWork;
-        public PlaneTypeController(IUnitOfWork unitOfWork)
+        private IServicePlaneType servicePlaneType;
+
+        public PlaneTypeController(IServicePlaneType servicePlaneType)
         {
-            this.unitOfWork = unitOfWork;
+            this.servicePlaneType = servicePlaneType;
         }
+
         // GET: api/PlaneTypeDTO
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<PlaneTypeDTO> Get()
         {
-            return new string[] { "value1", "value2" };
+            return servicePlaneType.GetPlaneTypes();
         }
 
         // GET: api/PlaneTypeDTO/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public PlaneTypeDTO Get(int id)
         {
-            return "value";
+            return servicePlaneType.GetPlaneType(id);
         }
-        
+
         // POST: api/PlaneTypeDTO
         [HttpPost]
         public void Post([FromBody]string value)
         {
         }
-        
+
         // PUT: api/PlaneTypeDTO/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
